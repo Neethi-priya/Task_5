@@ -89,6 +89,25 @@ else:
     print("The string is not a palindrome")
 
 `
+# 6 . Longest common substring
+
+`
+def longest_substring(str_1,str_2) :
+    long_common_string = ""
+    for i in range(len(str_1)) :
+        for j in range(len(str_2)) :
+            common_string = ""
+            k = 0
+            while i + k < len(str_1) and j +k < len(str_2) and str_1[i+k] == str_2[j+k] :
+                common_string += str_1[i+k]
+                k += 1
+            if len(common_string) > len(long_common_string) :
+                long_common_string = common_string
+    return long_common_string     
+string_1 = input(" Enter string 1 : ")
+string_2 = input(" Enter string 2 : ")
+print("longest common substring is : ", longest_substring(string_1,string_2)) 
+`
 
 # 7 . Frequent occuring character
 
